@@ -1,3 +1,5 @@
+MODIFICATIONS: added yolov5ify.py script to extract images and labels in the yolov5 format.
+
 # Drone-vs-Bird Detection Challenge
 
 
