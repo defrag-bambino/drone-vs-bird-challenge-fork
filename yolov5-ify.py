@@ -66,8 +66,8 @@ if __name__ == "__main__":
             # get the number of objects in the frame
             num_objs = int(label.split(" ")[1])
 
-            # create the label txt file for the frame
-            lbl_file = os.path.join(out_dir_lbls, vid_name_no_ext + "_" + str(i) + ".txt")
+            # create the label txt file for the frame, by replacing the 'images' in the frame_url[i] with 'labels' and replacing the extension with '.txt'
+            lbl_file = os.path.join(out_dir_lbls, os.path.basename(frame_urls[i]).replace("images", "labels").replace(".jpg", ".txt"))
 
             # load the corresponding frame as an image
             img = cv2.imread(frame_urls[i])
